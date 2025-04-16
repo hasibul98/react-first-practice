@@ -16,6 +16,10 @@ import IpAddressFinder from './project/ipAddressFinder/IpAddressFinder';
 
 import './index.css';
 
+import UserForm from './userForm/UserForm';
+import UserLogin from './userForm/UserLogin';
+
+
 
 
 
@@ -40,6 +44,10 @@ function App ()
         <Link className='navlink' to='/passwordvalidator'>password validator</Link>
         <Link className='navlink' to='/ipaddressfinder'>ipaddressfinder</Link>
 
+        <Link className='navlink' to='/userform'>user form</Link>
+        <Link className='navlink' to='/login'>user login</Link>
+
+
 
       </nav>
       <Routes>
@@ -55,9 +63,14 @@ function App ()
         <Route path='/passwordvalidator' element={ <PasswordValidator /> } />
         <Route path='/ipaddressfinder' element={ <IpAddressFinder /> } />
 
-      </Routes>
 
-    </BrowserRouter>
+        <Route path='/userform' element={ <UserForm /> } />
+        <Route path='/login' element={ <UserLogin /> } />
+
+
+      </Routes >
+
+    </BrowserRouter >
 
 
 

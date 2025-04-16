@@ -57,8 +57,13 @@ function InputLiveChange ()
 
       </form>
       <h1>Name:{ name }</h1>
+
       <h1>Email:{ email }</h1>
       <h1>Password:{ password }</h1>
+
+      <h1>Name:{ email }</h1>
+      <h1>Name:{ password }</h1>
+
       <h1>Submit: Name:{ submit.name } email: { submit.email } Password: { submit.password } </h1>
     </div>
   );
