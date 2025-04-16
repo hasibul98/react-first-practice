@@ -36,3 +36,11 @@ body{
        display: none !important;
      }
      
+     .input-form{
+       /* display: inline; */
+       
+     }
+     .input-form:focus{
+       outline: none;
+     }
+
