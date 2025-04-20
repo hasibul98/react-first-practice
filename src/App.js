@@ -13,12 +13,13 @@ import Joke from './project/createRandomJoke/Joke';
 import PasswordValidator from './project/passwordValidator/PasswordValidator';
 import IpAddressFinder from './project/ipAddressFinder/IpAddressFinder';
 
-
 import './index.css';
 
 import UserForm from './userForm/UserForm';
 import UserLogin from './userForm/UserLogin';
-
+import Home from './privatPage/Home';
+import PrivateRoute from './privatRouter/PrivateRoute';
+import Logout from './logout/Logout';
 
 
 
@@ -46,6 +47,8 @@ function App ()
 
         <Link className='navlink' to='/userform'>user form</Link>
         <Link className='navlink' to='/login'>user login</Link>
+        <Link className='navlink' to='/home'>home</Link>
+        <Link className='navlink' to='/logout'>Logout</Link>
 
 
 
@@ -66,7 +69,12 @@ function App ()
 
         <Route path='/userform' element={ <UserForm /> } />
         <Route path='/login' element={ <UserLogin /> } />
-
+        <Route path='/home' element={
+          <PrivateRoute>
+            <Home />
+          </PrivateRoute>
+        } />
+        <Route path='/logout' element={ <Logout /> } />
 
       </Routes >
 
